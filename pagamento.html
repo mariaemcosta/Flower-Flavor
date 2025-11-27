@@ -134,7 +134,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Ícone de voltar -->
         <div class="back-icon" onclick="window.history.back()">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -180,7 +179,6 @@
         </div>
     </div>
 
-    <!-- Modal -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <h2>Novo Endereço de Entrega</h2>
@@ -206,7 +204,6 @@
     </div>
 
     <script>
-        // Variáveis de referência
         const modal = document.getElementById('modal');
         const novoEnderecoBtn = document.getElementById('novo-endereco-btn');
         const salvarEnderecoBtn = document.getElementById('salvar-endereco-btn');
@@ -216,12 +213,10 @@
         const errorMsg = document.getElementById('error-msg');
         let quantidade = 1;
 
-        // Função para abrir o modal
         novoEnderecoBtn.addEventListener('click', () => {
             modal.style.display = 'flex';
         });
 
-        // Função para validar e salvar o endereço
         salvarEnderecoBtn.addEventListener('click', () => {
             const cep = document.getElementById('cep').value;
             const bairro = document.getElementById('bairro').value;
@@ -233,16 +228,14 @@
                 modal.style.display = 'none';
                 errorMsg.style.display = 'none';
             } else {
-                errorMsg.style.display = 'block'; // Mostra a mensagem de erro se campos estiverem vazios
+                errorMsg.style.display = 'block'; 
             }
         });
 
-        // Função para finalizar a compra e redirecionar para "meus_pedidos"
         finalizarCompraBtn.addEventListener('click', () => {
             window.location.href = "meus_pedidos.html";
         });
-
-        // Funções de adicionar e subtrair quantidade
+        
         document.getElementById('add').addEventListener('click', () => {
             quantidade++;
             quantidadeSpan.textContent = quantidade;
@@ -257,3 +250,4 @@
     </script>
 </body>
 </html>
+
