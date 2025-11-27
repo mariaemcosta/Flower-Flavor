@@ -148,18 +148,15 @@
 </style>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Inicializando calendário para o primeiro item
         const dateInput = document.getElementById('date-input');
         const calendar = document.getElementById('calendar');
         const monthYear = document.getElementById('month-year');
         const calendarBody = document.getElementById('calendar-body');
     
-        // Função para abrir/fechar o calendário
         dateInput.addEventListener('click', function() {
             calendar.style.display = calendar.style.display === 'block' ? 'none' : 'block';
         });
 
-        // Inicializando calendário para o segundo item
         const dateInput2 = document.getElementById('date-input2');
         const calendar2 = document.getElementById('calendar2');
         const monthYear2 = document.getElementById('month-year2');
@@ -169,9 +166,8 @@
             calendar2.style.display = calendar2.style.display === 'block' ? 'none' : 'block';
         });
 
-        // Função para atualizar o calendário
         function updateCalendar(monthElement, calendarBody) {
-            const daysInMonth = new Date(2024, 9, 0).getDate(); // Exemplo para setembro
+            const daysInMonth = new Date(2024, 9, 0).getDate(); 
             calendarBody.innerHTML = '';
             for (let i = 1; i <= daysInMonth; i++) {
                 const day = document.createElement('div');
@@ -191,7 +187,6 @@
         const pixForm = document.getElementById('pix-form');
         const finalizeBtn = document.getElementById('finalize-btn');
 
-        // Função para habilitar o botão de finalizar
         const phoneNumberInput = document.getElementById('phone-number');
         const paymentForms = document.querySelectorAll('.payment-form input');
 
@@ -244,7 +239,6 @@
         </header>
 
         <section class="order-list">
-            <!-- Produto A -->
             <div class="order-item">
                 <div class="photo-container">
                     <img src="imagens/11.webp" alt="Foto do Produto 1" class="photo">
@@ -273,8 +267,7 @@
                     <button class="quantity-btn">-</button>
                 </div>
             </div>
-
-            <!-- Produto B -->
+            
             <div class="order-item">
                 <div class="photo-container">
                     <img src="imagens/1.jpg" alt="Foto do Produto 2" class="photo">
@@ -316,7 +309,6 @@
                 </select>
 
                 <div id="payment-details">
-                    <!-- Formulário de Crédito -->
                     <div id="credito-form" class="payment-form" style="display: none;">
                         <label for="credit-card-number">Número do Cartão:</label>
                         <input type="text" id="credit-card-number" placeholder="Digite o número do cartão" required>
@@ -328,7 +320,6 @@
                         <input type="text" id="credit-card-cvc" placeholder="CVC" required>
                     </div>
 
-                    <!-- Formulário de Débito -->
                     <div id="debito-form" class="payment-form" style="display: none;">
                         <label for="debit-card-number">Número do Cartão:</label>
                         <input type="text" id="debit-card-number" placeholder="Digite o número do cartão" required>
@@ -340,7 +331,6 @@
                         <input type="text" id="debit-card-cvc" placeholder="CVC" required>
                     </div>
 
-                    <!-- Formulário de PIX -->
                     <div id="pix-form" class="payment-form" style="display: none;">
                         <label for="pix-key">Chave PIX:</label>
                         <input type="text" id="pix-key" placeholder="Digite sua chave PIX" required>
@@ -363,3 +353,4 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
